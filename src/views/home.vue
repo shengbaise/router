@@ -6,7 +6,9 @@
       <div class="nav" @click="toOrder">订单管理</div>
       <div class="nav" @click="toSupplier">供应商管理</div>
     </div>
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -29,12 +31,23 @@ export default {
 
 <style>
 .home {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
 }
 .nav-items {
+  flex-shrink: 0;
+  height: 48px;
+  line-height: 48px;
   display: flex;
   background-color: cadetblue;
 }
 .nav {
   padding-right: 16px;
+  cursor: pointer;
+}
+.content {
+  flex-grow: 1;
+  overflow-y: auto;
 }
 </style>
