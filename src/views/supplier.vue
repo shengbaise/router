@@ -1,5 +1,5 @@
 <template>
   <div>
-    供应商管理
+    <a href="/">go home</a> 供应商管理
   </div>
 </template>
